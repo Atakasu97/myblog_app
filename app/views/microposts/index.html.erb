@@ -1,0 +1,10 @@
+<h1>All Microposts</h1>
+
+<ul class="Microposts">
+  <% @microposts.each do |micropost| %>
+    <li>
+      <%= link_to micropost.title, micropost %>
+      <%= micropost.content %>
+    </li>
+  <% end %>
+</ul>

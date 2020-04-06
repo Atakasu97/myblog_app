@@ -1,0 +1,18 @@
+<h1>Microposts#new</h1>
+<p>Find me in app/views/microposts/new.html.erb</p>
+
+<div>
+  <div>
+    <%= form_for(@micropost) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
+
+      <%= f.submit "Create Micropost", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
