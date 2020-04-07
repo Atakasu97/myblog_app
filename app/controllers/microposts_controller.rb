@@ -22,9 +22,17 @@ class MicropostsController < ApplicationController
     @microposts = Micropost.all
   end
 
+  def destroy
+    @micropost = Micropost.find_by(id: params[:id])
+    redirect_to root_url if @micropost.nil?
+    @micropost.destroy
+    flash[:success] = "Micropost deleted"
+    redirect_to '/microposts' || root_url
+  end
+
   private
 
   def micropost_params
-    params.require(:micropost).permit(:title, :content)
+    params.require(:micropost).permit(:title, :content, :picture)
   end
 end

@@ -9,5 +9,9 @@
     <tr>
       <td><%= @micropost.content %></td>
     </tr>
+    <tr>
+      <td><%= link_to "delete", @micropost, method: :delete, data: {confirm: "You sure?"} %></td>
+    </tr>
   </table>
+
 </div>
