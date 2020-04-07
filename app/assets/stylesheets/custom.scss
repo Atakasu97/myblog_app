@@ -1,2 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// microposts
+.microposts {
+  div{
+
+
+  }
+  img{
+    height: 200px;
+  }
+}
+
+.micropost{
+  height: 300px;
+  border: solid #808000;
+}

@@ -1,16 +1,27 @@
 <h1>All Microposts</h1>
 
-<ul class="Microposts">
-  <% @microposts.each do |micropost| %>
-    <li>
-      <% if micropost.picture? %>
-        <%= image_tag micropost.picture.url %>
-      <% else %>
-        <%= image_tag 'kuchikomi1208_TP_V.jpg', :size =>'200x150' %>
+<div class="container">
+  <div class="row bg-danger">
+    <h1>ok<h1>
+  </div>
+  <div class="row">
+    <div class="microposts">
+      <% @microposts.each do |micropost| %>
+        <div class="col-md-6 bg-success micropost">
+          <div class="picture">
+            <% if micropost.picture? %>
+              <%= image_tag micropost.picture.url %>
+            <% else %>
+              <%= image_tag 'kuchikomi1208_TP_V.jpg', :size =>'200x150' %>
+            <% end %>
+          </div>
+          <div class="meta">
+            <h3><%= link_to micropost.title, micropost %></h3>
+            <%= micropost.created_at.strftime("%Y-%m-%d %H:%M") %>
+            <%= link_to "delete", micropost, method: :delete, data: {confirm: "You sure?"} %>
+          </div>
+        </div>
       <% end %>
-      <%= link_to micropost.title, micropost %>
-      <%= micropost.content %>
-      <%= link_to "delete", micropost, method: :delete, data: {confirm: "You sure?"} %>
-    </li>
-  <% end %>
-</ul>
+    </div>
+  </div>
+</div>
