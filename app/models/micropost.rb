@@ -1,5 +1,5 @@
 class Micropost < ApplicationRecord
-  validates :title, presence: true, uniqueness: true, length: {maximum: 30}
+  validates :title, presence: true, uniqueness: true
   mount_uploader :picture, PictureUploader
   validate :picture_size
 

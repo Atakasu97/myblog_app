@@ -30,6 +30,20 @@ class MicropostsController < ApplicationController
     redirect_to '/microposts' || root_url
   end
 
+  def edit
+    @micropost = Micropost.find(params[:id])
+  end
+
+  def update
+    @micropost = Micropost.find(params[:id])
+    if @micropost.update_attributes(micropost_params)
+      flash[:sucess] = "Micropost updared"
+      redirect_to @micropost
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def micropost_params
