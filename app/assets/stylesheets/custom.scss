@@ -3,17 +3,19 @@
 
 
 // microposts
-.microposts {
-  div{
 
-
-  }
-  img{
-    height: 200px;
-  }
+// 画像のトリミング
+.thumbnail150 {
+  width:150px;
+  height:150px;
+  object-fit:cover;
 }
 
-.micropost{
-  height: 300px;
-  border: solid #808000;
+.picture150 {
+  width:150px;
+  height:150px;
+}
+
+.caption {
+  height: 350px;
 }

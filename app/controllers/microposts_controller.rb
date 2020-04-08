@@ -19,7 +19,7 @@ class MicropostsController < ApplicationController
   end
 
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.paginate(page: params[:page])
   end
 
   def destroy

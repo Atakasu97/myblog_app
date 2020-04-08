@@ -41,12 +41,16 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (8.0.0)
-    autoprefixer-rails (9.7.5)
+    autoprefixer-rails (9.7.6)
       execjs
     bindex (0.8.1)
+    bootstrap-honoka-rails (3.3.7.5)
+      bootstrap-sass (~> 3.3.7)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-will_paginate (1.0.0)
+      will_paginate
     builder (3.2.4)
     byebug (9.0.6)
     carrierwave (1.2.2)
@@ -69,6 +73,8 @@ GEM
     erubi (1.9.0)
     excon (0.73.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.12.2)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -216,7 +222,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (3.2.5)
+    fog-vsphere (3.3.0)
       fog-core
       rbvmomi (>= 1.9, < 3)
     fog-xenserver (1.0.0)
@@ -245,7 +251,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.8.2)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
@@ -260,7 +266,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.4.0)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.2.4)
@@ -391,6 +397,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.1.6)
     xml-simple (1.1.5)
     xmlrpc (0.3.0)
 
@@ -398,10 +405,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-honoka-rails (~> 3.3.7)
   bootstrap-sass (= 3.3.7)
+  bootstrap-will_paginate (= 1.0.0)
   byebug (= 9.0.6)
   carrierwave (= 1.2.2)
   coffee-rails (= 4.2.2)
+  faker (= 1.7.3)
   fog (= 1.42)
   guard (= 2.16.2)
   guard-minitest (= 2.4.4)
@@ -422,6 +432,7 @@ DEPENDENCIES
   turbolinks (= 5.0.1)
   uglifier (= 3.2.0)
   web-console (= 3.5.1)
+  will_paginate (= 3.1.6)
 
 BUNDLED WITH
    2.1.4

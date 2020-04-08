@@ -1,9 +1,33 @@
-<% provide(:title, "Home") %>
-<h1>Sample App</h1>
+<div class="page-header">
+  <h1>Example page header <small>Subtext for header</small></h1>
+</div>
 <p>
   This is the home page for the
   <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
   sample application.
 </p>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag 'kuchikomi1208_TP_V.jpg' %>
+      <div class="caption">
+        <h3>高坂穂乃果</h3>
+        <p>『ラブライブ！』の主人公。16歳の高校2年生。一人称は「私」、「穂乃果」。左側の髪の一部を黄色のリボンで結んでいるセミロングヘア。好きな食べ物はいちご、嫌いな食べ物はピーマン。</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header">Default card</div>
+  <div class="card-body">
+    <h4 class="card-title">高坂穂乃果</h4>
+    <p class="card-text">
+      『ラブライブ！』の主人公。16歳の高校2年生。一人称は「私」、「穂乃果」。左側の髪の一部を黄色のリボンで結んでいるセミロングヘア。好きな食べ物はいちご、嫌いな食べ物はピーマン。
+    </p>
+  </div>
+</div>
 
 <%= link_to "Create Micropost", new_path, class: "btn btn-lg btn-primary" %>
