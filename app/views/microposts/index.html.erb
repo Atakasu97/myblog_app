@@ -1,31 +1,5 @@
 <h1>All Microposts</h1>
 
-<!-- <div class="container">
-  <div class="row bg-danger">
-    <h1>ok<h1>
-  </div>
-  <div class="row">
-    <div class="microposts">
-      <% @microposts.each do |micropost| %>
-        <div class="col-md-6 bg-success micropost">
-          <div class="picture">
-            <% if micropost.picture? %>
-              <%= image_tag micropost.picture.url %>
-            <% else %>
-              <%= image_tag 'kuchikomi1208_TP_V.jpg', :size =>'200x150' %>
-            <% end %>
-          </div>
-          <div class="meta">
-            <h3><%= link_to micropost.title, micropost %></h3>
-            <%= micropost.created_at.strftime("%Y-%m-%d %H:%M") %>
-            <%= link_to "delete", micropost, method: :delete, data: {confirm: "You sure?"} %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div> -->
-
 <%= will_paginate %>
 
 <div class="container">
@@ -44,7 +18,10 @@
           <h3><%= link_to truncate(micropost.title), micropost %></h3>
           <p><%= micropost.created_at.strftime("%Y-%m-%d %H:%M") %></p>
           <p><%= truncate(micropost.content, length: 100) %></p>
-          <p><%= link_to "delete", micropost, class: 'btn btn-danger', method: :delete, data: {confirm: "You sure?"} %></p>
+          <p>
+            <%= link_to "edit", "/microposts/#{micropost.id}/edit", class: 'btn btn-primary' %>
+            <%= link_to "delete", micropost, class: 'btn btn-danger', method: :delete, data: {confirm: "You sure?"} %>
+          </p>
         </div>
       </div>
 

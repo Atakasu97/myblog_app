@@ -8,19 +8,19 @@
   </div>
   <table>
     <tr>
-      <td><%= @micropost.title %></td>
+      <td><h2><%= @micropost.title %></h2></td>
     </tr>
     <tr>
       <td><%= @micropost.created_at.strftime("%Y-%m-%d %H:%M") %></td>
     </tr>
     <tr>
-      <td><%= @micropost.content %></td>
+      <td><h3><%= @micropost.content %><h3></td>
     </tr>
     <tr>
-      <td><%= link_to "delete", @micropost, method: :delete, data: {confirm: "You sure?"} %></td>
-    </tr>
-    <tr>
-      <td><%= link_to "edit", edit_micropost_path %></td>
+      <td>
+        <%= link_to "edit", edit_micropost_path, class: 'btn btn-primary' %>
+        <%= link_to "delete", @micropost, method: :delete, class: 'btn btn-danger', data: {confirm: "You sure?"} %>
+      </td>
     </tr>
   </table>
 
