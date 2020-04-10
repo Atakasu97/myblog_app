@@ -1,6 +1,18 @@
 <h1>All Microposts</h1>
 
-<%= will_paginate %>
+<%= search_form_for @search, url: microposts_path, class: 'form-inline' do |f| %>
+  <!-- <div class="row">
+    <div class="col-xs-3">
+
+    </div>
+  </div> -->
+  <div class="form-group">
+    <%= f.label :title_cont, 'Title', class: 'label label-default' %>
+    <%= f.search_field :title_cont, class: 'form-control', placeholder: 'Please title' %>
+  </div>
+  <%= f.submit '検索', class: 'btn btn-primary' %>
+<% end %>
+
 
 <div class="container">
   <div class="row">

@@ -15,6 +15,7 @@ gem 'bootstrap-honoka-rails' , '~> 3.3.7'
 gem 'faker',        '1.7.3'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'ransack'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

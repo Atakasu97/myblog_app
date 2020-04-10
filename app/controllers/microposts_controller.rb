@@ -19,7 +19,8 @@ class MicropostsController < ApplicationController
   end
 
   def index
-    @microposts = Micropost.paginate(page: params[:page])
+    @search = Micropost.ransack(params[:q])
+    @microposts = @search.result.paginate(page: params[:page])
   end
 
   def destroy
