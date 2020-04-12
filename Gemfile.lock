@@ -43,6 +43,7 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (9.7.6)
       execjs
+    bcrypt (3.1.7)
     bindex (0.8.1)
     bootstrap-honoka-rails (3.3.7.5)
       bootstrap-sass (~> 3.3.7)
@@ -413,6 +414,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.7)
   bootstrap-honoka-rails (~> 3.3.7)
   bootstrap-sass (= 3.3.7)
   bootstrap-will_paginate (= 1.0.0)
