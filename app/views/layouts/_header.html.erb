@@ -7,7 +7,7 @@
   <%= link_to 'users/index', users_path, class: 'navbar-brand' %>
   <% if logged_in? %>
     <%= link_to "Profile", current_user, class: 'navbar-brand' %>
-    <%= link_to "Log_out", logout_path, class: 'navbar-brand' %>
+    <%= link_to "Log_out", logout_path, method: :delete,class: 'navbar-brand' %>
     <%# 8.20章 %>
     <ul class="dropdown-menu">
       <li><%= link_to "Profile", current_user %></li>
@@ -18,7 +18,7 @@
       </li>
     </ul>
   <% else %>
-    <%= link_to "Log_in", login_path %>
+    <%= link_to "Log_in", login_path, class: 'navbar-brand' %>
   <% end %>
 
 
